@@ -9,7 +9,7 @@ Lines::Engine.routes.draw do
   get 'tags/:tag', to: 'articles#index', as: :tag
 
   resources :sessions
-  resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :password_resets, only: [:new, :create, :edit, :update]
 
   resources :articles, only: [:index, :show] do
     get 'page/:page', action: :index, on: :collection
@@ -23,15 +23,15 @@ Lines::Engine.routes.draw do
   namespace :admin do
     resources :articles do
       get :autocomplete_tag_name, on: :collection
-      post :toggle_publish#, on: :member
-      post :toggle_feature#, on: :member
+      post :toggle_publish #, on: :member
+      post :toggle_feature #, on: :member
     end
     resources :authors
     resources :pictures, only: [:create, :update, :destroy]
     resources :users
     root :to => 'articles#index'
   end
-  
+
   root :to => 'articles#index'
 
 end

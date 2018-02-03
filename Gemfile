@@ -22,7 +22,7 @@ gemspec
 
 group :development do
   gem 'capistrano'
-  gem 'yard'
+  gem 'yard', '~> 0.9.11'
   gem 'autoprefixer-rails'
 end
 

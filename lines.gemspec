@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
 
 
+  s.add_runtime_dependency 'nokogiri', '~> 1.8.1'
   s.add_runtime_dependency 'orm_adapter', '>= 0.5'
   s.add_runtime_dependency 'thread_safe', '>= 0.3'
   s.add_runtime_dependency 'railties', '>= 3.2.6', '< 6'
@@ -47,7 +48,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'sprockets-rails', '< 4'
   s.add_runtime_dependency 'rails', ['>= 3', '< 6']
 
-  s.add_development_dependency 'mysql2'
   s.add_development_dependency 'rspec-rails', '~> 2.14.2', '< 3'
   s.add_development_dependency 'rspec', '~> 2.14.1', '< 3'
 
